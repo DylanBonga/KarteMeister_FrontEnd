@@ -1,10 +1,5 @@
 
-function veranderTabel(){
-
-  var eerste = document.getElementById("cell1");
-  eerste.innerHTML = "boioioioi";
-
-
+//function veranderTabel(){
   // var xhr = new XMLHttpRequest();
   // xhr.onreadystatechange = function(){
   //   if(this.readyState>=3){
@@ -18,7 +13,7 @@ function veranderTabel(){
   // }
   // xhr.open("GET", "http://localhost:8082/hoi", true);
   // xhr.send();
-}
+//}
 
 function funXML(){
   var xhr = new XMLHttpRequest();
@@ -27,9 +22,12 @@ function funXML(){
       alert("In xhr "+this.readyState+this.responseText);
       var parseInput = JSON.parse(this.responseText);
       console.log(parseInput);
+      document.getElementById('id').innerHTML = parseInput.kleur;
     }
     xhr.open("GET", "http://localhost:8082/hoi", true);
     xhr.send();
+
+
   }
 }
 
